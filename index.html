@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sprachlern-Tool Französisch</title>
+  <script>
+    function displayWord() {
+      var words = [
+        {word: "Bonjour", level: "easy"},
+        {word: "Merci", level: "easy"},
+        {word: "Au revoir", level: "easy"},
+        {word: "Comment ça va", level: "easy"},
+        {word: "Bonne journée", level: "easy"},
+        {word: "Bonsoir", level: "easy"},
+        {word: "Comment allez-vous", level: "easy"},
+        {word: "S'il vous plaît", level: "easy"},
+        {word: "De rien", level: "easy"},
+        {word: "Excusez-moi", level: "easy"},
+        {word: "Pardon", level: "easy"},
+        {word: "Comment vous appelez-vous", level: "medium"},
+        {word: "Où habitez-vous", level: "medium"},
+        {word: "Quel est votre prénom", level: "medium"},
+        {word: "Quel est votre nom", level: "medium"},
+        {word: "Quel âge avez-vous", level: "medium"},
+        {word: "Où travaillez-vous", level: "medium"},
+        {word: "Quel est votre métier", level: "medium"},
+        {word: "Quel est votre numéro de téléphone", level: "medium"},
+        {word: "Quel est votre adresse email", level: "medium"},
+        {word: "Avez-vous des enfants", level: "hard"},
+        {word: "Combien avez-vous d'enfants", level: "hard"},
+        {word: "Comment s'appellent vos enfants", level: "hard"},
+        {word: "Comment s'appelle votre famille", level: "hard"},
+        {word: "Avez-vous un animal de compagnie", level: "hard"},
+        {word: "Comment s'appelle votre animal de compagnie", level: "hard"},
+        {word: "Quel est le métier de votre conjoint", level: "hard"},
+        {word: "Avez-vous des frères et sœurs", level: "hard"},
+        {word: "Combien avez-vous de frères et sœurs", level: "hard"},
+        {word: "Comment s'appellent vos frères et sœurs", level: "hard"},
+        {word: "Quel est votre pays d'origine", level: "hard"},
+        {word: "Où avez-vous grandi", level: "hard"},
+        {word: "Où habitez-vous actuellement", level: "hard"},
+        {word: "Quelle est votre langue maternelle", level: "hard"},
+       
+
+      ];
+      
+      var selectedLevel = document.getElementById("level").value;
+      var filteredWords = words.filter(function
+(word) {
+        return word.level === selectedLevel;
+      });
+      
+      var word = filteredWords[Math.floor(Math.random() * filteredWords.length)];
+      
+      document.getElementById("word-to-type").innerHTML = word.word;
+      document.getElementById("input-field").value = "";
+    }
+
+    function checkAnswer() {
+      var wordToType = document.getElementById("word-to-type").innerHTML;
+      var inputField = document.getElementById("input-field").value;
+      
+      if (wordToType === inputField) {
+        alert("Korrekt!");
+        displayWord();
+      } else {
+        alert("Leider falsch. Bitte versuche es noch einmal.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Sprachlern-Tool Französisch</h1>
+  <p>Bitte wähle eine Schwierigkeitsstufe:</p>
+  <select id="level">
+    <option value="easy">Leicht</option>
+    <option value="medium">Mittel</option>
+    <option value="hard">Schwer</option>
+  </select>
+  <button onclick="displayWord()">Wort anzeigen</button>
+  <br><br>
+  <p>Bitte schreibe das angezeigte Wort:</p>
+  <p id="word-to-type"></p>
+  <input type="text" id="input-field">
+  <button onclick="checkAnswer()">Antwort überprüfen</button>
+</body>
+</html>
+      
+
+
+
+
+<h5>grüße an die 7d XD</h5>
+
+
+
+<h4>Diese Website wurde in nur 1 tag erstellt und von github gehostet, danke </h4>
